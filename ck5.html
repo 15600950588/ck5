@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery-3.1.1.min.js"></script>
+		
+		<!--<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/bootstrap.js"></script>-->
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/iscroll.js"></script>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			img{
+				display: block;
+			}
+			html,body{
+				font-size: 62.5%;
+				height: 100%;
+			}
+			
+			header img{
+				width: 100%;
+				
+			}
+			nav{
+				margin-top: 3rem;
+			}
+			nav img{
+				width: 100%;
+				
+			}
+			header{
+				top: 0;
+				position: fixed;
+			}
+			footer{
+				display: flex;
+				background: #DFDAD6;
+				justify-content: space-around;
+				align-items: center;
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+			}
+			footer img{
+				width: 100%;
+			}
+			
+			.box {
+				width: 100%;
+				overflow: hidden;
+			}
+			.box ul{
+				width: 200%;
+				display: flex;
+			}
+			.box li{
+				height: 40px;
+				border: 1px dashed #999999;
+				text-align: center;
+				flex-grow: 1;
+				line-height: 40px;
+			}
+			#main{
+				display: flex;
+				text-align: center;
+				font-size: 1.6rem;
+				background: #D8D7D5;
+			}
+			#main div{
+				width: 33%;
+				flex-grow: 1;
+				
+				padding: 1rem 0;
+			}
+			#main p{
+				border-left: 1px solid #D0D0D0;
+			}
+			#main1 li{
+				border-bottom: 1px solid #909090;
+				padding: 1rem;
+			}
+			.ddd{
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+ 
+		
+				<header>
+					<div><img src="img/2.jpg" alt="" /></div>
+				</header>
+				<nav>
+					<img src="img/01b14455441e7f0000019ae95326f1_02.png" alt="" />
+				</nav>
+				
+				<div id="main">
+					<div class="ddd"><p style="border: none;">我的逍遥游</p></div>
+					<div><p>我的相册</p></div>
+					<div><p>功能设置</p></div>
+				</div>
+				
+				<div id="main1">
+					<li>我的微游记（15）</li>
+					<li>我的微游记（15）</li>
+					<li>我的微游记（15）</li>
+					<li>我的微游记（15）</li>
+					<li>我的微游记（15）</li>
+				</div>
+				
+		
+				<footer>
+					<div><img src="img/4.jpg" alt="" /><p>微游记</p></div>
+					<div><img src="img/5.jpg" alt="" /><p>微游记</p></div>
+					<div><img src="img/8.jpg" alt="" /></div>
+					<div><img src="img/6.jpg" alt="" /><p>微游记</p></div>
+					<div><img src="img/7.jpg" alt="" /><p>微游记</p></div>
+				</footer>
+		 
+	</body>
+	<script type="text/javascript">
+		$("#main div").click(function(){
+			$(this).addClass('ddd').siblings().removeClass("ddd");
+			var index = $(this).index()
+			if(index==0){
+				$('#main1').html('<li>我的微游记（15）</li>'
+								+'<li>我的微游记（15）</li>'
+								+'<li>我的微游记（15）</li>'
+								+'<li>我的微游记（15）</li>'
+								+'<li>我的微游记（15）</li>')		
+			}
+			if(index==1){
+				$('#main1').html('<li>我的挑战（15）</li>'
+								+'<li>我的挑战（15）</li>'
+								+'<li>我的挑战（15）</li>'
+								+'<li>我的挑战（15）</li>'
+								+'<li>我的挑战（15）</li>')
+			}
+			
+			if(index==2){
+				$('#main1').html('<li>我的粉丝（15）</li>'
+								+'<li>我的粉丝（15）</li>'
+								+'<li>我的粉丝（15）</li>'
+								+'<li>我的粉丝（15）</li>'
+								+'<li>我的粉丝（15）</li>')
+			}
+			
+		})
+	</script>
+</html>
